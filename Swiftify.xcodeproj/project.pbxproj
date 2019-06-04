@@ -16,12 +16,13 @@
 		4A68768022A5B66400542B86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A68767F22A5B66400542B86 /* Preview Assets.xcassets */; };
 		4A68768322A5B66400542B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A68768122A5B66400542B86 /* LaunchScreen.storyboard */; };
 		4A74545122A5C5DA001A2B8B /* Regex in Frameworks */ = {isa = PBXBuildFile; productRef = 4A74545022A5C5DA001A2B8B /* Regex */; };
-		4AF354F822A61F180050927F /* AttributedText in Frameworks */ = {isa = PBXBuildFile; productRef = 4AF354F722A61F180050927F /* AttributedText */; };
+		4AE64A6F22A6D5A900E5C548 /* HighlightedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE64A6E22A6D5A900E5C548 /* HighlightedText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A2881D222A5F927009ED672 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		4A2881D422A5F942009ED672 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		4A3B0A8722A6D77C00CBBB70 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4A68767322A5B66300542B86 /* Swiftify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A68767622A5B66300542B86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A68767822A5B66300542B86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		4A68767F22A5B66400542B86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A68768222A5B66400542B86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A68768422A5B66400542B86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AE64A6E22A6D5A900E5C548 /* HighlightedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +40,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A74545122A5C5DA001A2B8B /* Regex in Frameworks */,
-				4AF354F822A61F180050927F /* AttributedText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,9 +49,9 @@
 		4A68766A22A5B66300542B86 = {
 			isa = PBXGroup;
 			children = (
+				4A3B0A8722A6D77C00CBBB70 /* README.md */,
 				4A68767522A5B66300542B86 /* Swiftify */,
 				4A68767422A5B66300542B86 /* Products */,
-				4AF354F622A61F180050927F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +68,7 @@
 			children = (
 				4A68767622A5B66300542B86 /* AppDelegate.swift */,
 				4A68767A22A5B66300542B86 /* ContentView.swift */,
+				4AE64A6E22A6D5A900E5C548 /* HighlightedText.swift */,
 				4A68767822A5B66300542B86 /* SceneDelegate.swift */,
 				4A2881D422A5F942009ED672 /* StringExtensions.swift */,
 				4A2881D222A5F927009ED672 /* UIFontExtensions.swift */,
@@ -84,13 +86,6 @@
 				4A68767F22A5B66400542B86 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		4AF354F622A61F180050927F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,7 +106,6 @@
 			name = Swiftify;
 			packageProductDependencies = (
 				4A74545022A5C5DA001A2B8B /* Regex */,
-				4AF354F722A61F180050927F /* AttributedText */,
 			);
 			productName = Swiftify;
 			productReference = 4A68767322A5B66300542B86 /* Swiftify.app */;
@@ -175,6 +169,7 @@
 				4A68767722A5B66300542B86 /* AppDelegate.swift in Sources */,
 				4A2881D322A5F927009ED672 /* UIFontExtensions.swift in Sources */,
 				4A68767922A5B66300542B86 /* SceneDelegate.swift in Sources */,
+				4AE64A6F22A6D5A900E5C548 /* HighlightedText.swift in Sources */,
 				4A68767B22A5B66300542B86 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,10 +381,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4A74544F22A5C5DA001A2B8B /* XCRemoteSwiftPackageReference "Regex" */;
 			productName = Regex;
-		};
-		4AF354F722A61F180050927F /* AttributedText */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AttributedText;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
