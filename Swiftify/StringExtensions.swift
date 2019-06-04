@@ -1,3 +1,9 @@
+extension Range where Bound == String.Index {
+  init<S: StringProtocol>(_ string: S) {
+    self = string.startIndex ..< string.endIndex
+  }
+}
+
 extension String {
   static let loremIpsum = """
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. \

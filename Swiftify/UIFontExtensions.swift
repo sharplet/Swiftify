@@ -1,8 +1,9 @@
 import UIKit
 
 extension UIFont {
-  static var bold: UIFont {
-    let descriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body)
+  static func boldFont(withTextStyle: UIFont.TextStyle) -> UIFont {
+    let descriptor = UIFontDescriptor
+      .preferredFontDescriptor(withTextStyle: withTextStyle)
       .withSymbolicTraits(.traitBold)!
     return UIFont(descriptor: descriptor, size: 0)
   }

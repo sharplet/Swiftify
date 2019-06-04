@@ -1,13 +1,14 @@
-import SwiftUI
+import AttributedText
 import Regex
-import UIKit
+import SwiftUI
 
 struct ContentView: View {
-  @State var pattern: String = ""
+  @State private var pattern: String = ""
   let text = String.loremIpsum
+  let textStyle = UIFont.TextStyle.callout
 
   var body: some View {
-    return VStack {
+    VStack {
       TextField($pattern, placeholder: Text("Type a regex"))
 
       AttributedText(text, attributes: highlightAttributes)
@@ -24,9 +25,18 @@ struct ContentView: View {
   }
 
   var highlightAttributes: [Range<String.Index>: [NSAttributedString.Key: Any]] {
-    matches.reduce(into: [:]) { attributes, match in
-      attributes[match.range] = [.font: UIFont.bold, .foregroundColor: UIColor.red]
+    matches.reduce(into: baseAttributes) { attributes, match in
+      attributes[match.range] = [
+        .font: UIFont.boldFont(withTextStyle: textStyle),
+        .foregroundColor: UIColor.red,
+      ]
     }
+  }
+
+  var baseAttributes: [Range<String.Index>: [NSAttributedString.Key: Any]] {
+    [Range(text): [
+      .font: UIFont.preferredFont(forTextStyle: textStyle),
+    ]]
   }
 }
 

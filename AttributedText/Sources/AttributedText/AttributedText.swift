@@ -1,17 +1,20 @@
 import SwiftUI
 
-struct AttributedText: UIViewRepresentable {
+public struct AttributedText {
   private let string: NSMutableAttributedString
 
-  init(_ text: String, attributes: [Range<String.Index>: [NSAttributedString.Key: Any]] = [:]) {
+  public init(_ text: String, attributes: [Range<String.Index>: [NSAttributedString.Key: Any]] = [:]) {
     string = NSMutableAttributedString(string: text)
     for (range, attributes) in attributes {
       let nsRange = NSRange(range, in: text)
       string.addAttributes(attributes, range: nsRange)
     }
   }
+}
 
-  func makeUIView(context: UIViewRepresentableContext<AttributedText>) -> UIView {
+#if canImport(UIKit)
+extension AttributedText: UIViewRepresentable {
+  public func makeUIView(context: UIViewRepresentableContext<AttributedText>) -> UIView {
     let parent = UIView()
 
     let label = UILabel()
@@ -27,7 +30,7 @@ struct AttributedText: UIViewRepresentable {
     return parent
   }
 
-  func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<AttributedText>) {
+  public func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<AttributedText>) {
     let label = uiView.subviews.first as! UILabel
     label.attributedText = string
 
@@ -36,3 +39,4 @@ struct AttributedText: UIViewRepresentable {
     }
   }
 }
+#endif

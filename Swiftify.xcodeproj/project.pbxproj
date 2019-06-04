@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A2881D122A5F8E5009ED672 /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2881D022A5F8E5009ED672 /* AttributedText.swift */; };
 		4A2881D322A5F927009ED672 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2881D222A5F927009ED672 /* UIFontExtensions.swift */; };
 		4A2881D522A5F942009ED672 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2881D422A5F942009ED672 /* StringExtensions.swift */; };
 		4A68767722A5B66300542B86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68767622A5B66300542B86 /* AppDelegate.swift */; };
@@ -17,10 +16,10 @@
 		4A68768022A5B66400542B86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A68767F22A5B66400542B86 /* Preview Assets.xcassets */; };
 		4A68768322A5B66400542B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A68768122A5B66400542B86 /* LaunchScreen.storyboard */; };
 		4A74545122A5C5DA001A2B8B /* Regex in Frameworks */ = {isa = PBXBuildFile; productRef = 4A74545022A5C5DA001A2B8B /* Regex */; };
+		4AF354F822A61F180050927F /* AttributedText in Frameworks */ = {isa = PBXBuildFile; productRef = 4AF354F722A61F180050927F /* AttributedText */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A2881D022A5F8E5009ED672 /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
 		4A2881D222A5F927009ED672 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		4A2881D422A5F942009ED672 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		4A68767322A5B66300542B86 /* Swiftify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A74545122A5C5DA001A2B8B /* Regex in Frameworks */,
+				4AF354F822A61F180050927F /* AttributedText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +50,7 @@
 			children = (
 				4A68767522A5B66300542B86 /* Swiftify */,
 				4A68767422A5B66300542B86 /* Products */,
+				4AF354F622A61F180050927F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				4A68767622A5B66300542B86 /* AppDelegate.swift */,
-				4A2881D022A5F8E5009ED672 /* AttributedText.swift */,
 				4A68767A22A5B66300542B86 /* ContentView.swift */,
 				4A68767822A5B66300542B86 /* SceneDelegate.swift */,
 				4A2881D422A5F942009ED672 /* StringExtensions.swift */,
@@ -86,6 +86,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4AF354F622A61F180050927F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,6 +111,7 @@
 			name = Swiftify;
 			packageProductDependencies = (
 				4A74545022A5C5DA001A2B8B /* Regex */,
+				4AF354F722A61F180050927F /* AttributedText */,
 			);
 			productName = Swiftify;
 			productReference = 4A68767322A5B66300542B86 /* Swiftify.app */;
@@ -164,7 +172,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2881D522A5F942009ED672 /* StringExtensions.swift in Sources */,
-				4A2881D122A5F8E5009ED672 /* AttributedText.swift in Sources */,
 				4A68767722A5B66300542B86 /* AppDelegate.swift in Sources */,
 				4A2881D322A5F927009ED672 /* UIFontExtensions.swift in Sources */,
 				4A68767922A5B66300542B86 /* SceneDelegate.swift in Sources */,
@@ -379,6 +386,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4A74544F22A5C5DA001A2B8B /* XCRemoteSwiftPackageReference "Regex" */;
 			productName = Regex;
+		};
+		4AF354F722A61F180050927F /* AttributedText */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AttributedText;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
