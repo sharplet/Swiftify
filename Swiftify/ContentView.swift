@@ -24,19 +24,19 @@ struct ContentView: View {
     regex?.allMatches(in: text) ?? []
   }
 
-  var highlightAttributes: [Range<String.Index>: [NSAttributedString.Key: Any]] {
-    matches.reduce(into: baseAttributes) { attributes, match in
-      attributes[match.range] = [
+  var highlightAttributes: [(Range<String.Index>, [NSAttributedString.Key: Any])] {
+    matches.reduce(into: [baseAttributes]) { attributes, match in
+      attributes.append((match.range, [
         .font: UIFont.boldFont(withTextStyle: textStyle),
         .foregroundColor: UIColor.red,
-      ]
+      ]))
     }
   }
 
-  var baseAttributes: [Range<String.Index>: [NSAttributedString.Key: Any]] {
-    [Range(text): [
+  var baseAttributes: (Range<String.Index>, [NSAttributedString.Key: Any]) {
+    (Range(text), [
       .font: UIFont.preferredFont(forTextStyle: textStyle),
-    ]]
+    ])
   }
 }
 
