@@ -6,12 +6,22 @@ struct ContentView: View {
   @State private(set) var pattern: String = ""
 
   var body: some View {
-    return VStack {
-      TextField($pattern, placeholder: Text("Type a regex"))
-      HighlightedText(text, highlighting: regex) { match in
-        match.bold().color(.red)
+    NavigationView {
+      VStack {
+        TextField($pattern, placeholder: Text("Type a regex"))
+
+        HighlightedText(text, highlighting: regex) { match in
+          match
+            .bold()
+            .color(.red)
+        }
+        .lineLimit(nil)
+
+        Spacer()
       }
-    }.padding().lineLimit(nil)
+      .padding()
+      .navigationBarTitle(Text("Regex"))
+    }
   }
 
   private var regex: Regex? {
