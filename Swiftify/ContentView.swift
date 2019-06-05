@@ -2,10 +2,8 @@ import Regex
 import SwiftUI
 
 struct ContentView: View {
-  @State private var pattern: String = ""
-
-  let text = String.loremIpsum
-  let textStyle = UIFont.TextStyle.callout
+  let text: String
+  @State private(set) var pattern: String = ""
 
   var body: some View {
     return VStack {
@@ -24,7 +22,7 @@ struct ContentView: View {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    ContentView(text: .loremIpsum, pattern: "lorem")
   }
 }
 #endif
