@@ -8,13 +8,13 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       VStack {
-        TextField($pattern, placeholder: Text("Type a regex"))
+        TextField("Type a regex", text: $pattern)
           .textFieldStyle(.roundedBorder)
 
         HighlightedText(text, highlighting: regex) { match in
           match
             .bold()
-            .color(.red)
+            .foregroundColor(.red)
         }
         .lineLimit(nil)
         .foregroundColor(.secondary)
